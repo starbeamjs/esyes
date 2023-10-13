@@ -1,0 +1,23 @@
+{
+  "name": "esyes",
+  "version": "1.0.0",
+  "description": "Run your TypeScript files quickly and with more positivity.",
+  "type": "module",
+  "scripts": {
+    "test:lint": "eslint . --max-warnings 0",
+    "test:types": "tsc -b"
+  },
+  "dependencies": {
+    "@esbuild-kit/esm-loader": "^2.6.5",
+    "execa": "^8.0.1"
+  },
+  "devDependencies": {
+    "@starbeam-dev/eslint-plugin": "^1.0.1",
+    "@types/node": "^20.8.6",
+    "eslint": "^8.51.0"
+  },
+  "bin": {
+    "esyes": "index.js"
+  },
+  "license": "ISC"
+}

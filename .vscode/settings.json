@@ -1,0 +1,23 @@
+{
+  "explorer.excludeGitIgnore": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.formatDocument": "always"
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "package.json": "pnpm-lock.yaml, .npmrc, .gitignore",
+    ".editorconfig": ".eslintrc.*"
+  },
+  "explorer.sortOrder": "foldersNestsFiles",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
+}
