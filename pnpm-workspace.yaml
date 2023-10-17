@@ -1,1 +1,1 @@
-packages: [".", "@types/*", ".yalc/*", ".yalc/@*/*"]
+packages: [".yalc/*", ".yalc/@*/*"]

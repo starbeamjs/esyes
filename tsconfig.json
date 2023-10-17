@@ -10,12 +10,11 @@
     "noImplicitAny": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
-    "outDir": "dist",
-    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "types": ["node"],
+    "types": ["node", "./src/modules.d.ts"],
     "verbatimModuleSyntax": true
   },
-  "files": ["index.js"]
+  "include": ["src/**/*"]
 }
