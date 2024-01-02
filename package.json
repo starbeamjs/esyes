@@ -3,15 +3,18 @@
   "type": "module",
   "version": "1.0.0",
   "description": "Run your TypeScript files quickly and with more positivity.",
-  "license": "ISC",
+  "license": "MIT",
   "main": "./src/register.js",
   "exports": {
     ".": "./src/register.js",
     "./preload": "./src/preload.js"
   },
   "scripts": {
-    "test:lint": "eslint . --max-warnings 0",
-    "test:types": "tsc -b"
+    "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
+    "lint:js": "eslint . --max-warnings 0",
+    "lint:package-json": "npmPkgJsonLint .",
+    "lint:publish": "publint",
+    "lint:types": "tsc -b"
   },
   "dependencies": {
     "convert-source-map": "^2.0.0",
@@ -25,11 +28,16 @@
     "@types/convert-source-map": "^2.0.1",
     "@types/node": "^20.8.6",
     "@types/source-map": "^0.5.7",
+    "concurrently": "^8.2.2",
     "eslint": "^8.51.0",
     "knip": "^2.34.0",
+    "npm-package-json-lint": "^7.1.0",
+    "npm-package-json-lint-config-default": "^6.0.0",
+    "publint": "^0.2.7",
     "typescript": "^5.2.2"
   },
   "bin": {
     "esyes": "src/bin.js"
-  }
+  },
+  "repository": "https://github.com/starbeamjs/esyes"
 }
