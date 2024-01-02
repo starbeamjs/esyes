@@ -48,7 +48,7 @@ console.info(`Found ${tests.length} tests`);
 
 for (let { testPath, exitCode } of tests) {
   try {
-    let result = await execa(bin, testPath);
+    let result = await execa(bin, [testPath]);
 
     results.push({
       name: testPath,
@@ -57,6 +57,8 @@ for (let { testPath, exitCode } of tests) {
         expected: exitCode,
       },
       pass: result.exitCode === exitCode,
+      stderr: result.stderr,
+      sdout: result.sdout,
     });
   } catch (e) {
     results.push({
@@ -66,16 +68,19 @@ for (let { testPath, exitCode } of tests) {
         expected: exitCode,
       },
       pass: e.exitCode === exitCode,
+      stderr: e.stderr,
+      sdout: e.sdout,
     });
   }
 }
 
 for (let result of results) {
-  let { pass, name, exitCode } = result;
+  let { pass, name, exitCode, stderr, stdout } = result;
   let symbol = pass ? `` : ``;
   let failureMsg = pass
     ? ``
-    : `\n\tExpected: ${exitCode.expected}\n\tReceived: ${exitCode.actual}`;
+    : `\n\tExpected: ${exitCode.expected}\n\tReceived: ${exitCode.actual}` +
+      `\n\n\t\t${stderr}`;
 
   let shorterName = name.replace(__dirname, "");
 
