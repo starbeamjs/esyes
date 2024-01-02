@@ -10,11 +10,12 @@
     "./preload": "./src/preload.js"
   },
   "scripts": {
-    "lint:types": "tsc -b",
-    "lint:publish": "publint",
-    "lint:package-json": "npmPkgJsonLint .",
+    "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
     "lint:js": "eslint . --max-warnings 0",
-    "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\""
+    "lint:package-json": "npmPkgJsonLint .",
+    "lint:publish": "publint",
+    "lint:types": "tsc -b",
+    "test": "node ./test/exit-code-tests.js"
   },
   "dependencies": {
     "convert-source-map": "^2.0.0",
@@ -27,14 +28,14 @@
     "@types/convert-source-map": "^2.0.1",
     "@types/node": "^20.8.6",
     "@types/source-map": "^0.5.7",
+    "concurrently": "^8.2.2",
     "eslint": "^8.51.0",
-    "knip": "^2.34.0",
-    "typescript": "^5.2.2",
-    "publint": "^0.2.7",
-    "npm-package-json-lint-config-default": "^6.0.0",
-    "npm-package-json-lint": "^7.1.0",
     "execa": "^8.0.1",
-    "concurrently": "^8.2.2"
+    "knip": "^2.34.0",
+    "npm-package-json-lint": "^7.1.0",
+    "npm-package-json-lint-config-default": "^6.0.0",
+    "publint": "^0.2.7",
+    "typescript": "^5.2.2"
   },
   "bin": {
     "esyes": "src/bin.js"
