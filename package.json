@@ -15,13 +15,13 @@
     "lint:package-json": "npmPkgJsonLint .",
     "lint:publish": "publint",
     "lint:types": "tsc -b",
-    "test": "node ./tests/exit-code-tests.js"
+    "test": "node ./tests/run-exit-code-tests.js"
   },
   "dependencies": {
     "convert-source-map": "^2.0.0",
     "magic-string": "^0.30.5",
     "source-map": "^0.7.4",
-    "tsx": "^3.14.0"
+    "tsx": "^4.7.0"
   },
   "devDependencies": {
     "@starbeam-dev/eslint-plugin": "^1.0.2",

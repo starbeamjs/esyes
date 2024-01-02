@@ -15,8 +15,29 @@ if (nodeArgs.length === 0) {
   process.exit(1);
 }
 
-await execa("node", ["--import", register, ...nodeArgs], {
-  stdio: "inherit",
-  serialization: "advanced",
-  reject: false,
-});
+/**
+ * @param {unknown} e
+ * @returns {e is { exitCode: number; command: string; }}
+ */
+function isExecaError(e) {
+  if (typeof e !== "object") return false;
+  if (e === null) return false;
+
+  return "exitCode" in e && "command" in e;
+}
+
+try {
+  await execa("node", ["--import", register, ...nodeArgs], {
+    stdio: "inherit",
+    serialization: "advanced",
+    reject: true,
+  });
+} catch (e) {
+  if (isExecaError(e)) {
+    // Error will have already logged.
+    // No need to include the trace from execa and esyes
+    process.exit(e.exitCode);
+  }
+
+  throw e;
+}
