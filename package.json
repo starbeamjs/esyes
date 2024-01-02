@@ -40,5 +40,9 @@
   "bin": {
     "esyes": "src/bin.js"
   },
-  "repository": "https://github.com/starbeamjs/esyes"
+  "repository": "https://github.com/starbeamjs/esyes",
+  "volta": {
+    "node": "21.5.0",
+    "pnpm": "8.13.1"
+  }
 }
