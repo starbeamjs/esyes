@@ -15,7 +15,7 @@
     "lint:package-json": "npmPkgJsonLint .",
     "lint:publish": "publint",
     "lint:types": "tsc -b",
-    "test": "node ./test/exit-code-tests.js"
+    "test": "node ./tests/exit-code-tests.js"
   },
   "dependencies": {
     "convert-source-map": "^2.0.0",
