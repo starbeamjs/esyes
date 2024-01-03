@@ -1,7 +1,7 @@
 {
   "name": "esyes",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Run your TypeScript files quickly and with more positivity.",
   "license": "MIT",
   "main": "./src/register.js",
