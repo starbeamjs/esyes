@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@ef4/lerna-changelog@2.0.0':
+    hash: dwb4balcfgo6jbbmygouw5lpmq
+    path: patches/@ef4__lerna-changelog@2.0.0.patch
+
 importers:
 
   .:
@@ -97,7 +102,7 @@ packages:
       regenerator-runtime: 0.14.1
     dev: true
 
-  /@ef4/lerna-changelog@2.0.0:
+  /@ef4/lerna-changelog@2.0.0(patch_hash=dwb4balcfgo6jbbmygouw5lpmq):
     resolution: {integrity: sha512-dCT3wMC501ZQqFwroxuDrktSm8tgrmMO67S7hRbJqRbbUarkYd0KVZPyW+O569lVBdEVTGTWWMNmPgGrD9IQjA==}
     engines: {node: 12.* || 14.* || >= 16}
     hasBin: true
@@ -114,6 +119,7 @@ packages:
       - bluebird
       - supports-color
     dev: true
+    patched: true
 
   /@ericcornelissen/bash-parser@0.5.2:
     resolution: {integrity: sha512-4pIMTa1nEFfMXitv7oaNEWOdM+zpOZavesa5GaiWTgda6Zk32CFGxjUp/iIaN0PwgUW1yTq/fztSjbpE8SLGZQ==}
@@ -4315,7 +4321,7 @@ packages:
     resolution: {integrity: sha512-5c4JdHXPtVDEbC/aNCaTAr+NrVm1NST3rCFSVkdGInXfJ8KLPFWBZ9/AtIniTRb+E6vjJwy33N9DTnuW76iRpQ==}
     hasBin: true
     dependencies:
-      '@ef4/lerna-changelog': 2.0.0
+      '@ef4/lerna-changelog': 2.0.0(patch_hash=dwb4balcfgo6jbbmygouw5lpmq)
       '@npmcli/package-json': 5.0.0
       '@octokit/rest': 19.0.13
       '@types/fs-extra': 9.0.13

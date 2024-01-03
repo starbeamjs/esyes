@@ -1,1 +1,17 @@
 # Changelog
+## Release (2024-01-03)
+
+esyes 1.0.1 (patch)
+
+#### :bug: Bug Fix
+* `esyes`
+  * [#3](https://github.com/starbeamjs/esyes/pull/3) Add tests ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### :house: Internal
+* `esyes`
+  * [#4](https://github.com/starbeamjs/esyes/pull/4) Setup release-plan ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#3](https://github.com/starbeamjs/esyes/pull/3) Add tests ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#2](https://github.com/starbeamjs/esyes/pull/2) Add a repo and change the license, add package linting ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
