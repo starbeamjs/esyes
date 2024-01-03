@@ -38,6 +38,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: check-plan
     if: needs.check-plan.outputs.command == 'release'
+    permissions:
+      contents: write
+      pull-requests: write   
 
     steps:
       - uses: actions/checkout@v4
