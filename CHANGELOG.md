@@ -15,3 +15,7 @@ esyes 1.0.1 (patch)
 
 #### Committers: 1
 - [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
+esyes 1.0.1
+
+initial release
