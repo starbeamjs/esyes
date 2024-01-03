@@ -1,13 +1,17 @@
 {
   "name": "esyes",
-  "type": "module",
   "version": "1.0.0",
   "description": "Run your TypeScript files quickly and with more positivity.",
+  "repository": "https://github.com/starbeamjs/esyes",
   "license": "MIT",
-  "main": "./src/register.js",
+  "type": "module",
   "exports": {
     ".": "./src/register.js",
     "./preload": "./src/preload.js"
+  },
+  "main": "./src/register.js",
+  "bin": {
+    "esyes": "src/bin.js"
   },
   "scripts": {
     "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
@@ -35,12 +39,9 @@
     "npm-package-json-lint": "^7.1.0",
     "npm-package-json-lint-config-default": "^6.0.0",
     "publint": "^0.2.7",
+    "release-plan": "^0.6.0",
     "typescript": "^5.2.2"
   },
-  "bin": {
-    "esyes": "src/bin.js"
-  },
-  "repository": "https://github.com/starbeamjs/esyes",
   "volta": {
     "node": "21.5.0",
     "pnpm": "8.13.1"
