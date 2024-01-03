@@ -1,7 +1,7 @@
 {
   "name": "esyes",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Run your TypeScript files quickly and with more positivity.",
   "license": "MIT",
   "main": "./src/register.js",
@@ -40,6 +40,11 @@
   },
   "bin": {
     "esyes": "src/bin.js"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@ef4/lerna-changelog@2.0.0": "patches/@ef4__lerna-changelog@2.0.0.patch"
+    }
   },
   "repository": "https://github.com/starbeamjs/esyes",
   "volta": {
