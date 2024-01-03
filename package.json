@@ -41,14 +41,14 @@
   "bin": {
     "esyes": "src/bin.js"
   },
-  "repository": "https://github.com/starbeamjs/esyes",
-  "volta": {
-    "node": "21.5.0",
-    "pnpm": "8.13.1"
-  },
   "pnpm": {
     "patchedDependencies": {
       "@ef4/lerna-changelog@2.0.0": "patches/@ef4__lerna-changelog@2.0.0.patch"
     }
+  },
+  "repository": "https://github.com/starbeamjs/esyes",
+  "volta": {
+    "node": "21.5.0",
+    "pnpm": "8.13.1"
   }
 }
