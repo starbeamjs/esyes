@@ -1,17 +1,8 @@
 {
   "solution": {
     "esyes": {
-      "impact": "patch",
-      "oldVersion": "1.0.1",
-      "newVersion": "1.0.2",
-      "constraints": [
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :bug: Bug Fix"
-        }
-      ],
-      "pkgJSONPath": "./package.json"
+      "oldVersion": "1.0.2"
     }
   },
-  "description": "## Release (2024-01-03)\n\nesyes 1.0.2 (patch)\n\n#### :bug: Bug Fix\n* `esyes`\n  * [#6](https://github.com/starbeamjs/esyes/pull/6) Fix the package.json as 1.0.1 was the initial release, and the package.json did not reflect this. ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### Committers: 1\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+  "description": "\n\n\n\n"
 }
