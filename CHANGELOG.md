@@ -1,4 +1,14 @@
 # Changelog
+## Release (2024-01-20)
+
+esyes 1.0.3 (patch)
+
+#### :bug: Bug Fix
+* `esyes`
+  * [#9](https://github.com/starbeamjs/esyes/pull/9) Add execa to 'dependencies' ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 1
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
 ## Release (2024-01-03)
 
 esyes 1.0.2 (patch)
